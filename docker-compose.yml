@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: ./ASP.NET
+      dockerfile: Dockerfile
+    ports:
+      - "5056:5056"
+    volumes:
+      - ./ASP.NET:/app
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:5056
+
+  frontend:
+    build:
+      context: ./artistas-app
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./artistas-app:/app
+      - /app/node_modules
+    environment:
+      VITE_API_URL: http://api:5056
+    depends_on:
+      - api
