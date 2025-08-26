@@ -10,4 +10,5 @@ public class AppDbContext : DbContext
     }
     public DbSet<Artista> Artistas { get; set; }
     public DbSet<Musica> Musicas { get; set; }
+    // public DbSet<Usuario> Usuarios { get; set; }
 }
