@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.EntityFrameworkCore;
 
+namespace Api.Controllers;
+
 [ApiController]
 [Route("api/[controller]")]
 public class MusicaController : ControllerBase
