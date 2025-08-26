@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+.artista-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.artista-card h2 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.artista-card h3 {
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.artista-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.artista-card li {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-left: 3px solid #007bff;
+}
