@@ -72,10 +72,10 @@
 //         public async Task<ActionResult<string>> Login([FromBody] LoginDto loginDto)
 //         {
 //             var usuario = await _context.Usuarios.SingleOrDefaultAsync(u => u.Email == loginDto.Email);
-            
+
 //             // Aqui você deve verificar a senha corretamente.
 //             // Não se esqueça de usar a mesma lógica que você usou para criar o hash da senha.
-//             if (usuario == null || usuario.Senha != loginDto.Senha) 
+//             if (usuario == null || usuario.Senha != loginDto.Senha)
 //                 return Unauthorized();
 
 //             var tokenHandler = new JwtSecurityTokenHandler();
@@ -94,6 +94,20 @@
 //             var token = tokenHandler.CreateToken(tokenDescriptor);
 //             return Ok(new { Token = tokenHandler.WriteToken(token) });
 //         }
+//         //-----------
+//         //ou uma comparação simples e MENOS SEGURA com os dados no banco
+//         // [HttpPost("login")]
+//         // public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
+//         // {
+//         //     var usuario = await _context.Usuarios.SingleOrDefaultAsync(u => u.Email == loginDto.Email);
+
+//         //     // Verifica se o usuário existe e se a senha está correta
+//         //     if (usuario == null || usuario.Senha != loginDto.Senha)
+//         //         return Unauthorized();
+
+//         //     return Ok("Login bem-sucedido!");
+//         // }
+//         //--------------
 //     }
 
 //     public class LoginDto
