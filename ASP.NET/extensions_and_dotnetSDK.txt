@@ -1,0 +1,12 @@
+Instalar o .NET SDK (runtime + ferramentas)
+ 👉 https://dotnet.microsoft.com/download
+
+ Instalar o VS Code + a extensão C# (C# Dev Kit / OmniSharp) para suporte a IntelliSense, debug etc.
+
+-- Para criar um console
+dotnet new console -n MeuProjeto
+cd MeuProjeto
+
+-- Se for API
+dotnet new webapi -n MinhaApi
+cd MinhaApi
